@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Lista de Estudantes">
+        <template if:true={students}>
+            <lightning-datatable 
+                key-field="Id"
+                data={students}
+                columns={columns}>
+            </lightning-datatable>
+        </template>
+
+        <br/>
+
+        <lightning-button-group class="buttons">
+            <lightning-button label="Ativos" onclick={filterActive} variant="brand-outline"></lightning-button>
+            <lightning-button label="Inativos" onclick={filterInactive} variant="brand-outline"></lightning-button>
+            <lightning-button label="Todos" onclick={showAll} variant="brand-outline"></lightning-button>
+        </lightning-button-group>
+            <lightning-button type="submit" label="Create Student" onclick={navigateToApp} variant="brand"></lightning-button>
+    </lightning-card>
+</template>

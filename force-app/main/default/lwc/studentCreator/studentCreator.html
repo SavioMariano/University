@@ -1,0 +1,16 @@
+<template>
+    <lightning-layout horizontal-align="center">
+        <lightning-layout-item size="4">
+            <lightning-card title="Create Student">
+                <lightning-record-edit-form object-api-name={objectApiName} onsuccess={handleSaveStudent}>
+                <lightning-input-field field-name={nameField} required></lightning-input-field>
+                <lightning-input-field field-name={registrationField} required></lightning-input-field>
+                <lightning-input-field field-name={courseField} required></lightning-input-field>
+                <lightning-input-field field-name={registrationStatusField} required></lightning-input-field>
+
+                <lightning-button class="buttons" type="submit" label="Save" variant="brand"></lightning-button>
+            </lightning-record-edit-form>
+            </lightning-card>
+        </lightning-layout-item>
+    </lightning-layout>gsgs
+</template>
